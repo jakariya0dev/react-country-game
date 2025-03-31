@@ -1,0 +1,309 @@
+
+/* -------------------------- Common CSS */
+
+button{
+  transition: all 100ms;
+}
+
+button:hover{
+  box-shadow: 2px 2px 15px 1px rgba(0,0,0,0.75);
+  cursor: pointer;
+}
+
+/* Country */
+
+#countries {
+  background-color: burlywood;
+  width: 100%;
+  
+}
+
+#countries .btn-back {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  background-color: burlywood;
+  padding: 10px 0;
+}
+
+.country-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.country-card {
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: rgba(51, 81, 111, 0.2) 0px 8px 24px;
+  background: #fff;
+}
+
+.country-card:hover{
+  box-shadow: rgba(147, 67, 67, 0.4) 0px 10px 32px;
+}
+
+.country-card img {
+  border: 1px solid rgb(223, 220, 220);
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.country-details-wrapper{
+  padding: 64px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+#country .btn-group{
+  position: sticky;
+  top: 6px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  column-gap: 16px;
+}
+
+#country .btn-group button:nth-child(1){
+  background-color: #BF7E04;
+}
+
+#country .btn-group button:nth-child(2){
+  background-color: #250a90;
+}
+
+.country-details-col .name{
+  text-transform: uppercase;
+}
+
+.country-details-col .of-name{
+  text-transform: uppercase;
+  color: red;
+}
+
+.country-details-col .cp-name{
+  font-size: 24px;
+}
+
+.coatOfArms{
+  height: 200px;
+  width: 200px;
+
+}
+
+/* ---------------- Home Page ----------------- */
+
+#home-page .container{
+  width: 100vw;
+  height: 100vh;
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#home-page .container p{
+  margin: 32px 0 16px;
+}
+
+.countries-btn{
+  width: 20%;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 0;
+  font-size: 16px;
+  color: rgb(235, 221, 221);
+  background-color: #BF7E04;
+  transition: all .1s;
+}
+
+.game-bts-wrapper{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-bts-wrapper button{
+    width: 20%;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 0;
+    font-size: 16px;
+    color: rgb(235, 221, 221);
+    transition: all .1s;
+}
+
+.game-bts-wrapper button{
+    width: 20%;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 0;
+    font-size: 16px;
+    color: rgb(235, 221, 221);
+    transition: all .1s;
+}
+
+
+.game-bts-wrapper button:hover, .countries-btn:hover{
+  box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.75);
+}
+
+.game-btn{
+  background-color: #5D3141;
+}
+
+.score-btn{
+  background-color: #80669d;
+}
+.exit-btn{
+  background-color: #ED0800;
+}
+
+/* -----------------------------------------Basic Game ----------------------------------------- */
+
+#basic-game{
+  height: 100vh;
+  width: 100vw;
+  background-color: burlywood;
+  display: grid;
+  place-items: center;
+}
+
+#basic-game .container{
+  background-color: white;
+  width: 50%;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#basic-game .header{
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  /* justify-content: space-between; */
+}
+
+#basic-game .ques-flag{
+  margin-bottom: 24px;
+  height: 200px;
+  width: 320px;
+  border: 1px solid rgb(236, 226, 226);
+}
+
+#basic-game .questions{
+  margin: 16px 0;
+}
+
+#basic-game .questions ol li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 2px;
+  transition: all 100ms;
+}
+
+.selected-opt{
+  background-color: rgb(199, 188, 30);
+}
+
+.unselected-opt{
+  background-color: rgb(239, 229, 229);
+}
+
+#basic-game .questions ol li:hover{
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.75);
+}
+
+#basic-game .btn-group{
+  display: flex;
+  justify-content: space-between;
+}
+
+#basic-game .btn-group button{
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 4px;
+}
+
+#basic-game .btn-group button:first-child{
+  background-color: #845702;
+}
+
+#basic-game .btn-group button:last-child{
+  background-color: #6f0a2f;
+}
+
+/* --------------------------------------- Summery Page ------------------------------------ */
+
+#summery-page .summery-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  padding: 100px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 2px gray;
+}
+
+table.summery{
+  min-width: 200px;
+  border-collapse: collapse;
+  border: none;
+  color: rgb(90, 90, 90);
+  margin-bottom: 32px;
+}
+
+table.summery td, th, tr{
+  border: none;
+}
+
+table.summery td{
+  border-bottom: 1px solid #5D3141;
+  padding: 2px 0;
+
+}
+
+#summery-page .summery-card .btn-group button:nth-child(1){
+  background-color: #80669d;
+}
+
+#summery-page .summery-card .btn-group button:nth-child(2){
+  background-color: #BF7E04;
+}
+
+#summery-page .summery-card .btn-group button:nth-child(3){
+  background-color: brown;
+}
+
+/* ===================================  Responsive Design ===================================== */
+@media (max-width: 768px) {
+  .country-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .country-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .country-card img {
+    height: 120px;
+  }
+}
+
+
