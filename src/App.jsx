@@ -21,7 +21,7 @@ function App() {
       fetch('https://restcountries.com/v3.1/all')
       .then(res => res.json())
       .then(res => {
-        setAllCountry(res.sort(() => Math.random() - 0.5));
+        setAllCountry(res);
         setBestScore();
       });
   },[page]);
