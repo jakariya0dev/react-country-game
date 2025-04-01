@@ -14,7 +14,7 @@ function HomePage({setPage, setSummeryData}) {
     return (
         <div id="home-page">
             <div className="container">
-                <div className="game-bts-wrapper">
+                <div className="btn-group">
                     <button onClick={() => setPage('countries-page')} className="countries-btn">All Countries</button>
                     <button onClick={() => setPage('game-page')} className="game-btn">Play Game</button>
                     <button onClick={handleScoreClick} className="score-btn">Score Card</button>

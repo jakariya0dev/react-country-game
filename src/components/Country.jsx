@@ -27,10 +27,10 @@ function Country({country, setPage}) {
                 </div>
 
                 <div className="country-details-col">
-                    <h5>Flag</h5>
+                    <h5>FLAG: </h5>
                     <img src={country.flags.png} alt=""/> <br/> <br/>
 
-                    <table>
+                    <table className="country-details-table">
                         
                         <tbody>
                             <tr>
@@ -69,7 +69,7 @@ function Country({country, setPage}) {
                 </div>
                 <div className="country-details-col">
 
-                    <table>
+                    <table className="country-details-table">
 
                         <tbody>
                             <tr>
@@ -89,7 +89,7 @@ function Country({country, setPage}) {
 
                             <tr>
                                 <th>Languages</th>
-                                <td>{country.languages.en}</td>
+                                <td>{country.languages[Object.keys(country.languages)[0]]}</td>
                             </tr>
 
                             <tr>

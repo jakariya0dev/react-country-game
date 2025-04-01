@@ -28,6 +28,10 @@ function GamePage({allCountry, setPage, setSummeryData}) {
 
     function handleNextClick() {
 
+        if (selectedOptionIndex == null) {
+            return alert('Please select an option');
+        }
+
         setSelectedOptionIndex(null);
         checkAns();
         setCurrentIndex(prevIndex => {
@@ -79,9 +83,9 @@ function GamePage({allCountry, setPage, setSummeryData}) {
         <div id="basic-game">
             <div className="container">
                 <div className="header">
-                    <img title={allCountry[currentIndex].name.common} className="ques-flag" src={allCountry[currentIndex].flags.png} alt="Question flag" />
+                    <img className="ques-flag" src={allCountry[currentIndex].flags.png} alt="Question flag" />
                     <div>
-                        <table>
+                        <table className="game-score-table">
                             <tbody>
                                 <tr style={{ "color" : "green" }}>
                                     <th>Best Score: </th>
@@ -89,7 +93,7 @@ function GamePage({allCountry, setPage, setSummeryData}) {
                                 </tr>
                                 <tr style={{ "color": "blue" }}>
                                     <th>Current Score: </th>
-                                    <td> {currentScore} </td>
+                                    <td>{currentScore}</td>
                                 </tr>
                                 <tr>
                                     <th>Questions: </th>

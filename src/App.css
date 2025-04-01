@@ -10,7 +10,44 @@ button:hover{
   cursor: pointer;
 }
 
-/* Country */
+/* ---------------- Home Page ----------------- */
+
+#home-page .container{
+  width: 100vw;
+  height: 100vh;
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#home-page .btn-group{
+  width: 25%;
+}
+
+#home-page .btn-group button{
+  width: 100%;
+  padding: 16px 0;
+}
+
+.countries-btn{
+  background-color: #2b2b71;
+}
+
+.game-btn{
+  background-color: #729b14;
+}
+
+.score-btn{
+  background-color: #4f744c;
+}
+.exit-btn{
+  background-color: #ED0800;
+}
+
+
+/* -------------------------------------- Country ------------------------ */
 
 #countries {
   background-color: burlywood;
@@ -25,6 +62,7 @@ button:hover{
   top: 0;
   background-color: burlywood;
   padding: 10px 0;
+  box-shadow: 0 2px 50px 16px gray;
 }
 
 .country-wrapper {
@@ -51,22 +89,27 @@ button:hover{
   height: 150px;
   object-fit: cover;
   margin-bottom: 10px;
+  
 }
+/* --------------------- country details ----------- */
 
 .country-details-wrapper{
-  padding: 64px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  padding: 64px;
 }
 
 #country .btn-group{
+  width: 100%;
+  background-color: burlywood;
   position: sticky;
-  top: 6px;
-  padding: 16px;
+  top: 0;
+  padding: 16px 0;
   display: flex;
   justify-content: center;
   column-gap: 16px;
+  box-shadow: 0 2px 50px 2px gray;
 }
 
 #country .btn-group button:nth-child(1){
@@ -77,13 +120,38 @@ button:hover{
   background-color: #250a90;
 }
 
+.country-details-table{
+  width: 100%;
+  padding: 16px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.country-details-table tr{
+  border-bottom: 1px solid #e6ede2;
+}
+
+.country-details-table td{
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
 .country-details-col .name{
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 .country-details-col .of-name{
   text-transform: uppercase;
   color: red;
+}
+
+.country-details-col .name + p{
+  text-align: justify;
+}
+
+.country-details-col img{
+  margin-top: 8px;
 }
 
 .country-details-col .cp-name{
@@ -93,83 +161,13 @@ button:hover{
 .coatOfArms{
   height: 200px;
   width: 200px;
-
-}
-
-/* ---------------- Home Page ----------------- */
-
-#home-page .container{
-  width: 100vw;
-  height: 100vh;
-  background-color: burlywood;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#home-page .container p{
-  margin: 32px 0 16px;
-}
-
-.countries-btn{
-  width: 20%;
-  margin-bottom: 8px;
-  border: none;
-  border-radius: 4px;
-  padding: 16px 0;
-  font-size: 16px;
-  color: rgb(235, 221, 221);
-  background-color: #BF7E04;
-  transition: all .1s;
-}
-
-.game-bts-wrapper{
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-}
-
-.game-bts-wrapper button{
-    width: 20%;
-    margin-bottom: 8px;
-    border: none;
-    border-radius: 4px;
-    padding: 16px 0;
-    font-size: 16px;
-    color: rgb(235, 221, 221);
-    transition: all .1s;
-}
-
-.game-bts-wrapper button{
-    width: 20%;
-    margin-bottom: 8px;
-    border: none;
-    border-radius: 4px;
-    padding: 16px 0;
-    font-size: 16px;
-    color: rgb(235, 221, 221);
-    transition: all .1s;
+  display: inline-block;
+  margin-top: 16px;
 }
 
 
-.game-bts-wrapper button:hover, .countries-btn:hover{
-  box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.75);
-}
 
-.game-btn{
-  background-color: #5D3141;
-}
-
-.score-btn{
-  background-color: #80669d;
-}
-.exit-btn{
-  background-color: #ED0800;
-}
-
-/* -----------------------------------------Basic Game ----------------------------------------- */
+/* ----------------------------------------- Game Page ----------------------------------------- */
 
 #basic-game{
   height: 100vh;
@@ -193,11 +191,30 @@ button:hover{
   /* justify-content: space-between; */
 }
 
+#basic-game .header > div{
+  width: 50%;
+}
+
 #basic-game .ques-flag{
   margin-bottom: 24px;
   height: 200px;
   width: 320px;
   border: 1px solid rgb(236, 226, 226);
+}
+
+.game-score-table{
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+
+.game-score-table tr{
+  border-bottom: 1px solid gray;
+}
+
+.game-score-table td{
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 #basic-game .questions{
@@ -260,7 +277,7 @@ button:hover{
 }
 
 table.summery{
-  min-width: 200px;
+  width: 100%;
   border-collapse: collapse;
   border: none;
   color: rgb(90, 90, 90);
@@ -273,8 +290,12 @@ table.summery td, th, tr{
 
 table.summery td{
   border-bottom: 1px solid #5D3141;
-  padding: 2px 0;
+  padding-top: 12px;
+  padding-bottom: 8px;
 
+}
+#summery-page .btn-group button{
+  padding: 10px 16px;
 }
 
 #summery-page .summery-card .btn-group button:nth-child(1){
@@ -290,20 +311,88 @@ table.summery td{
 }
 
 /* ===================================  Responsive Design ===================================== */
-@media (max-width: 768px) {
+
+@media (max-width: 1080px) {
   .country-wrapper {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
+
+  .country-details-wrapper{
+    
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+  }
+
+  #home-page .btn-group{
+    width: 50%;
+  }
+
+  #basic-game .container{
+    width: 75%;
+  }
+
+  #basic-game .header{
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+
+  #basic-game .header > div{
+    width: 100%;
+  }
+
+  #summery-page .summery-card{
+    padding: 32px;
+  }
+
 }
 
 @media (max-width: 480px) {
   .country-wrapper {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    padding: 32px;
+  }
+
+  .country-details-wrapper{
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
   }
 
   .country-card img {
     height: 120px;
   }
+
+  #home-page .btn-group{
+    width: 75%;
+  }
+
+  #basic-game .header{
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+
+  #basic-game .container{
+    width: 90%;
+  }
+
+  #basic-game .header > div{
+    width: 100%;
+  }
+
+  #summery-page .summery-card{
+    padding: 50px;
+  }
+
+  #summery-page .btn-group{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 6px;
+    align-items: stretch;
+  }
+
+
 }
 
 
